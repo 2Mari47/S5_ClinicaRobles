@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <!-- Fondo completo -->
+    <ImageView
+        android:id="@+id/imageFondo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/inicio_fondo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Imagen de doctores -->
+    <ImageView
+        android:id="@+id/imageDoctores"
+        android:layout_width="550dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/inicio_doctores"
+        android:contentDescription="Doctores Clínica Robles"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/headerLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <!-- Logo de clínica debajo de doctores -->
+    <ImageView
+        android:id="@+id/headerLogo"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo_clinica"
+        android:contentDescription="Logo Clínica Robles"
+        app:layout_constraintTop_toBottomOf="@id/imageDoctores"
+        app:layout_constraintBottom_toTopOf="@id/textFrase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Frase debajo del logo -->
+    <TextView
+        android:id="@+id/textFrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="“Siempre contigo, siempre Robles”"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/headerLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botón de entrada -->
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido"
+        android:backgroundTint="#03B403"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/textFrase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
